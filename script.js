@@ -566,6 +566,22 @@ function gerarTodosOsPNGs() {
             fundo: "https://operacional-procap.github.io/gerador-stories/fundo_7digitos.png",
             arquivo: "7digitos.png",
             desenhar: desenhar7Digitos
+        },
+
+        {
+            fundo: "https://operacional-procap.github.io/gerador-stories/fundo_5digitos_incentivo.png",
+            arquivo: "5digitos_incentivo.png",
+            desenhar: desenhar5Digitos
+        },
+        {
+            fundo: "https://operacional-procap.github.io/gerador-stories/fundo_6digitos_incentivo.png",
+            arquivo: "6digitos_incentivo.png",
+            desenhar: desenhar6Digitos
+        },
+        {
+            fundo: "https://operacional-procap.github.io/gerador-stories/fundo_7digitos_incentivo.png",
+            arquivo: "7digitos_incentivo.png",
+            desenhar: desenhar7Digitos
         }
 
     ];
