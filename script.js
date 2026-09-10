@@ -571,17 +571,17 @@ function gerarTodosOsPNGs() {
         {
             fundo: "https://operacional-procap.github.io/gerador-stories/fundo_5digitos_incentivo.png",
             arquivo: "5digitos_incentivo.png",
-            desenhar: desenhar5Digitos
+            desenhar: desenhar5DigitosIncentivo
         },
         {
             fundo: "https://operacional-procap.github.io/gerador-stories/fundo_6digitos_incentivo.png",
             arquivo: "6digitos_incentivo.png",
-            desenhar: desenhar6Digitos
+            desenhar: desenhar6DigitosIncentivo
         },
         {
             fundo: "https://operacional-procap.github.io/gerador-stories/fundo_7digitos_incentivo.png",
             arquivo: "7digitos_incentivo.png",
-            desenhar: desenhar7Digitos
+            desenhar: desenhar7DigitosIncentivo
         }
 
     ];
@@ -865,4 +865,209 @@ function desenhar7Digitos(ctx, d) {
 
     );
 
+}
+
+// ============================================================
+// INCENTIVO - 5 DÍGITOS
+// ============================================================
+
+function desenhar5DigitosIncentivo(ctx, d) {
+
+    const BRANCO = "#ffffff";
+    const LARANJA = "#ff912b";
+
+    escreverCentro(ctx, d.data, 540, 135, BRANCO, "800 48px Arial");
+
+    escreverCentro(ctx, "Nº" + d.extracao, 540, 1580, BRANCO, "800 24px Arial");
+
+
+    // P1: últimos 1 dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p1.substring(0,4), cor: BRANCO },
+        { texto: d.p1.substring(4,5), cor: LARANJA }
+    ], 716, 760);
+
+
+    // P2: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p2.substring(0,4), cor: BRANCO },
+        { texto: d.p2.substring(4,5), cor: LARANJA }
+    ], 716, 912);
+
+
+    // P3: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p3.substring(0,4), cor: BRANCO },
+        { texto: d.p3.substring(4,5), cor: LARANJA }
+    ], 716, 1064);
+
+
+    // P4: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p4.substring(0,4), cor: BRANCO },
+        { texto: d.p4.substring(4,5), cor: LARANJA }
+    ], 716, 1216);
+
+
+    // P5: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p5.substring(0,4), cor: BRANCO },
+        { texto: d.p5.substring(4,5), cor: LARANJA }
+    ], 716, 1368);
+
+
+    // Número sorteado
+    const sorteado5 =
+        d.p1.substring(4,5) +
+        d.p2.substring(4,5) +
+        d.p3.substring(4,5) +
+        d.p4.substring(4,5) +
+        d.p5.substring(4,5);
+
+    escreverCentro(
+        ctx,
+        sorteado5,
+        716,
+        1520,
+        LARANJA,
+        "800 70px Arial"
+    );
+}
+
+
+// ============================================================
+// INCENTIVO - 6 DÍGITOS
+// ============================================================
+
+function desenhar6DigitosIncentivo(ctx, d) {
+
+    const BRANCO = "#ffffff";
+    const LARANJA = "#ff912b";
+
+    escreverCentro(ctx, d.data, 540, 135, BRANCO, "800 48px Arial");
+
+    escreverCentro(ctx, "Nº" + d.extracao, 540, 1580, BRANCO, "800 24px Arial");
+
+
+    // P1: últimos 2 dígitos em laranja
+    escreverPremio(ctx, [
+        { texto: d.p1.substring(0,3), cor: BRANCO },
+        { texto: d.p1.substring(3,5), cor: LARANJA }
+    ], 716, 760);
+
+
+    // P2: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p2.substring(0,4), cor: BRANCO },
+        { texto: d.p2.substring(4,5), cor: LARANJA }
+    ], 716, 912);
+
+
+    // P3: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p3.substring(0,4), cor: BRANCO },
+        { texto: d.p3.substring(4,5), cor: LARANJA }
+    ], 716, 1064);
+
+
+    // P4: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p4.substring(0,4), cor: BRANCO },
+        { texto: d.p4.substring(4,5), cor: LARANJA }
+    ], 716, 1216);
+
+
+    // P5: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p5.substring(0,4), cor: BRANCO },
+        { texto: d.p5.substring(4,5), cor: LARANJA }
+    ], 716, 1368);
+
+
+    // Número sorteado
+    const sorteado6 =
+        d.p1.substring(3,5) +
+        d.p2.substring(4,5) +
+        d.p3.substring(4,5) +
+        d.p4.substring(4,5) +
+        d.p5.substring(4,5);
+
+    escreverCentro(
+        ctx,
+        sorteado6.substring(0,3) + "." + sorteado6.substring(3,6),
+        716,
+        1520,
+        LARANJA,
+        "800 70px Arial"
+    );
+}
+
+
+// ============================================================
+// INCENTIVO - 7 DÍGITOS
+// ============================================================
+
+function desenhar7DigitosIncentivo(ctx, d) {
+
+    const BRANCO = "#ffffff";
+    const LARANJA = "#ff912b";
+
+    escreverCentro(ctx, d.data, 540, 135, BRANCO, "800 48px Arial");
+
+    escreverCentro(ctx, "Nº" + d.extracao, 540, 1580, BRANCO, "800 24px Arial");
+
+
+    // P1: últimos 3 dígitos em laranja
+    escreverPremio(ctx, [
+        { texto: d.p1.substring(0,2), cor: BRANCO },
+        { texto: d.p1.substring(2,5), cor: LARANJA }
+    ], 716, 760);
+
+
+    // P2: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p2.substring(0,4), cor: BRANCO },
+        { texto: d.p2.substring(4,5), cor: LARANJA }
+    ], 716, 912);
+
+
+    // P3: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p3.substring(0,4), cor: BRANCO },
+        { texto: d.p3.substring(4,5), cor: LARANJA }
+    ], 716, 1064);
+
+
+    // P4: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p4.substring(0,4), cor: BRANCO },
+        { texto: d.p4.substring(4,5), cor: LARANJA }
+    ], 716, 1216);
+
+
+    // P5: último dígito em laranja
+    escreverPremio(ctx, [
+        { texto: d.p5.substring(0,4), cor: BRANCO },
+        { texto: d.p5.substring(4,5), cor: LARANJA }
+    ], 716, 1368);
+
+
+    // Número sorteado
+    const sorteado7 =
+        d.p1.substring(2,5) +
+        d.p2.substring(4,5) +
+        d.p3.substring(4,5) +
+        d.p4.substring(4,5) +
+        d.p5.substring(4,5);
+
+    escreverCentro(
+        ctx,
+        sorteado7.substring(0,1) + "." +
+        sorteado7.substring(1,4) + "." +
+        sorteado7.substring(4,7),
+        716,
+        1520,
+        LARANJA,
+        "800 70px Arial"
+    );
 }
