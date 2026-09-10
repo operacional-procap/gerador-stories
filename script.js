@@ -132,6 +132,125 @@ function gerar() {
     document.getElementById("sorteado7").innerHTML =
         '<span class="laranja">' + sorteado7Formatado + '</span>';
 
+    // ============================================================
+// PRÉVIAS - INCENTIVO
+// ============================================================
+
+// Data
+document.getElementById("data5Incentivo").innerHTML = data;
+document.getElementById("data6Incentivo").innerHTML = data;
+document.getElementById("data7Incentivo").innerHTML = data;
+
+// Extração
+document.getElementById("extracao5Incentivo").innerHTML = "Nº" + extracao;
+document.getElementById("extracao6Incentivo").innerHTML = "Nº" + extracao;
+document.getElementById("extracao7Incentivo").innerHTML = "Nº" + extracao;
+
+
+// ===== 5 DÍGITOS - INCENTIVO =====
+
+document.getElementById("premio1_5Incentivo").innerHTML =
+    '<span class="branco">'  + p1.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p1.substring(4,5) + '</span>';
+
+document.getElementById("premio2_5Incentivo").innerHTML =
+    '<span class="branco">'  + p2.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p2.substring(4,5) + '</span>';
+
+document.getElementById("premio3_5Incentivo").innerHTML =
+    '<span class="branco">'  + p3.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p3.substring(4,5) + '</span>';
+
+document.getElementById("premio4_5Incentivo").innerHTML =
+    '<span class="branco">'  + p4.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p4.substring(4,5) + '</span>';
+
+document.getElementById("premio5_5Incentivo").innerHTML =
+    '<span class="branco">'  + p5.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p5.substring(4,5) + '</span>';
+
+const sorteado5Incentivo =
+    p1.substring(4,5) +
+    p2.substring(4,5) +
+    p3.substring(4,5) +
+    p4.substring(4,5) +
+    p5.substring(4,5);
+
+document.getElementById("sorteado5Incentivo").innerHTML =
+    '<span class="laranja">' + sorteado5Incentivo + '</span>';
+
+
+// ===== 6 DÍGITOS - INCENTIVO =====
+
+document.getElementById("premio1_6Incentivo").innerHTML =
+    '<span class="branco">'  + p1.substring(0,3) + '</span>' +
+    '<span class="laranja">' + p1.substring(3,5) + '</span>';
+
+document.getElementById("premio2_6Incentivo").innerHTML =
+    '<span class="branco">'  + p2.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p2.substring(4,5) + '</span>';
+
+document.getElementById("premio3_6Incentivo").innerHTML =
+    '<span class="branco">'  + p3.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p3.substring(4,5) + '</span>';
+
+document.getElementById("premio4_6Incentivo").innerHTML =
+    '<span class="branco">'  + p4.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p4.substring(4,5) + '</span>';
+
+document.getElementById("premio5_6Incentivo").innerHTML =
+    '<span class="branco">'  + p5.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p5.substring(4,5) + '</span>';
+
+const sorteado6Incentivo =
+    p1.substring(3,5) +
+    p2.substring(4,5) +
+    p3.substring(4,5) +
+    p4.substring(4,5) +
+    p5.substring(4,5);
+
+document.getElementById("sorteado6Incentivo").innerHTML =
+    '<span class="laranja">' +
+    sorteado6Incentivo.substring(0,3) + "." +
+    sorteado6Incentivo.substring(3,6) +
+    '</span>';
+
+
+// ===== 7 DÍGITOS - INCENTIVO =====
+
+document.getElementById("premio1_7Incentivo").innerHTML =
+    '<span class="branco">'  + p1.substring(0,2) + '</span>' +
+    '<span class="laranja">' + p1.substring(2,5) + '</span>';
+
+document.getElementById("premio2_7Incentivo").innerHTML =
+    '<span class="branco">'  + p2.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p2.substring(4,5) + '</span>';
+
+document.getElementById("premio3_7Incentivo").innerHTML =
+    '<span class="branco">'  + p3.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p3.substring(4,5) + '</span>';
+
+document.getElementById("premio4_7Incentivo").innerHTML =
+    '<span class="branco">'  + p4.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p4.substring(4,5) + '</span>';
+
+document.getElementById("premio5_7Incentivo").innerHTML =
+    '<span class="branco">'  + p5.substring(0,4) + '</span>' +
+    '<span class="laranja">' + p5.substring(4,5) + '</span>';
+
+const sorteado7Incentivo =
+    p1.substring(2,5) +
+    p2.substring(4,5) +
+    p3.substring(4,5) +
+    p4.substring(4,5) +
+    p5.substring(4,5);
+
+document.getElementById("sorteado7Incentivo").innerHTML =
+    '<span class="laranja">' +
+    sorteado7Incentivo.substring(0,1) + "." +
+    sorteado7Incentivo.substring(1,4) + "." +
+    sorteado7Incentivo.substring(4,7) +
+    '</span>';
 
     // ===== LOCALSTORAGE =====
 
