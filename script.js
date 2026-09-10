@@ -605,9 +605,19 @@ function desenha7digitos(ctx, dados) {
 // DOWNLOAD
 // ============================================================
 
-document.getElementById("downloadBtn").addEventListener("click", gerarTodosOsPNGs);
+document.getElementById("downloadNormaisBtn").addEventListener("click", function () {
+    gerarPNGs("normais");
+});
 
-function gerarTodosOsPNGs() {
+document.getElementById("downloadIncentivosBtn").addEventListener("click", function () {
+    gerarPNGs("incentivos");
+});
+
+document.getElementById("downloadTodosBtn").addEventListener("click", function () {
+    gerarPNGs("todos");
+});
+
+function gerarPNGs(tipo) {
 
     const data = document.getElementById("dataInput").value.trim();
     const extracao = document.getElementById("extracaoInput").value.trim();
@@ -705,14 +715,24 @@ function gerarTodosOsPNGs() {
 
     ];
 
-    let indice = 0;
+    let storiesSelecionados;
 
-    function gerarProximo() {
+    if (tipo === "normais") {
+        storiesSelecionados = stories.slice(0, 3);
+    } else if (tipo === "incentivos") {
+        storiesSelecionados = stories.slice(3, 6);
+    } else {
+        storiesSelecionados = stories;
+    }
 
-        if (indice >= stories.length)
-            return;
+let indice = 0;
 
-        const story = stories[indice];
+function gerarProximo() {
+
+    if (indice >= storiesSelecionados.length)
+        return;
+
+        const story = storiesSelecionados[indice];
 
         const canvas = document.createElement("canvas");
 
